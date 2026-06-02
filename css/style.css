@@ -6,6 +6,7 @@
   --white: #fff;
   --gray70: #b4b7bb;
   --gray60: #9c9fa5;
+  --bg: #020a18;
   --duration: 0.3s;
 }
 
@@ -165,7 +166,7 @@ header {
       "partner partner";
 
     @media screen and (max-width: 1024px) {
-      grid-templates-areas:
+      grid-template-areas:
         "content content"
         "img img"
         "partner partner";
@@ -242,6 +243,118 @@ header {
     .header-partners-item {
       svg {
         width: 100%;
+      }
+    }
+  }
+}
+
+main {
+  background: var(--bg);
+  padding: 130px 0px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+
+    .main__img {
+      max-width: 725px;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    .main__block {
+      max-width: 484px;
+      h2 {
+        color: var(--white);
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 36px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 32px;
+        }
+
+        @media screen and (max-width: 580px) {
+          font-size: 28px;
+        }
+      }
+
+      p {
+        color: var(--gray60);
+        margin-top: 0;
+        margin-bottom: 50px;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+
+      .main__block .main__img {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
+
+  .main__slider {
+    margin: 120px 0px;
+
+    .main__slider__items {
+      display: flex;
+      gap: 30px;
+      justify-content: flex-start;
+      overflow-x: auto;
+
+      .main__slider-item {
+        padding: 30px;
+        max-width: 320px;
+        background: linear-gradient(
+          to top,
+          #0d1522,
+          #0e1523,
+          #101825,
+          #131b28,
+          #161d2a,
+          #171f2b,
+          #18202c
+        );
+        max-width: 320px;
+        min-width: 320px;
+        flex-shrink: 0;
+
+        .main__slider-icon {
+          width: 98px;
+          height: 98px;
+          margin: 0 auto;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .main__slider-title {
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+          color: var(--white);
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        .main__slider-descr {
+          color: var(--gray60);
+          padding: 0;
+        }
       }
     }
   }
