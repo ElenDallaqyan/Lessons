@@ -292,8 +292,12 @@ main {
       p {
         color: var(--gray60);
         margin-top: 0;
-        margin-bottom: 50px;
-      }
+        }
+
+        button{
+          margin-top:34px;
+          
+        }
     }
     @media screen and (max-width: 1024px) {
       flex-wrap: wrap;
@@ -313,6 +317,7 @@ main {
       gap: 30px;
       justify-content: flex-start;
       overflow-x: auto;
+      border-radius:10px;
 
       .main__slider-item {
         padding: 30px;
@@ -357,5 +362,10 @@ main {
         }
       }
     }
+   
   }
 }
+
+ .main__slider__items::-webkit-scrollbar {
+      display: none;
+    }
